@@ -8,7 +8,7 @@ const jsonParser = express.json();
 const serializeNote = note => ({
   id: parseInt(note.id),
   notename: note.name || note.notename,
-  folderid: note.folderid,
+  folderid: parseInt(note.folderid),
   content: note.content,
   modified: note.modified
 });
