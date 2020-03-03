@@ -33,7 +33,6 @@ notesRouter
         });
       }
     }
-
     NotesService.insertNote(req.app.get("db"), serializeNote(newNote))
       .then(note => {
         res
