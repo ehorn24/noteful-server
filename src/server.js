@@ -8,11 +8,7 @@ const db = knex({
   connection: DATABASE_URL
 });
 
-app.use(
-  cors({
-    origin: CLIENT_ORIGIN
-  })
-);
+app.use(cors());
 
 app.set("db", db);
 
