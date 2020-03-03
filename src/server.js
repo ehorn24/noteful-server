@@ -1,14 +1,14 @@
 const knex = require("knex");
 const cors = require("cors");
 const app = require("./app");
-const { CLIENT_ORIGIN } = require("./config");
+const { PORT, DATABASE_URL } = require("./config");
 
 const PORT = process.env.PORT || 2000;
-const DB_URL = process.env.DB_URL;
+const DATABASE_URL = process.env.DATABASE_URL;
 
 const db = knex({
   client: "pg",
-  connection: DB_URL
+  connection: DATABASE_URL
 });
 
 app.use(

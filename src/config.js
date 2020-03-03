@@ -1,5 +1,7 @@
 module.exports = {
   PORT: process.env.PORT || 2000,
   NODE_ENV: process.env.NODE_ENV || "development",
-  DB_URL: process.env.DB_URL
+  DATABASE_URL:
+    process.env.DATABASE_URL ||
+    "postgresql//ellahorn@localhost:5432/noteful_server"
 };
