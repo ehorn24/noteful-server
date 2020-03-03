@@ -6,10 +6,11 @@ const notesRouter = express.Router();
 const jsonParser = express.json();
 
 const serializeNote = note => ({
-  id: note.id,
-  notename: note.name,
+  id: parseInt(note.id),
+  notename: note.name || note.notename,
   folderid: note.folderid,
-  content: note.content
+  content: note.content,
+  modified: note.modified
 });
 
 notesRouter
