@@ -3,5 +3,5 @@ CREATE TABLE noteful_notes (
   noteName TEXT NOT NULL,
   folderId INTEGER REFERENCES noteful_folders(id) NOT NULL,
   content TEXT NOT NULL,
-  modified DATE SET DEFAULT now()
+  modified DATE DEFAULT now()
 );
